@@ -6,10 +6,10 @@ from flask_api.services.list_users_service import list_user_service
 
 # from fake_bd import user_data
 
-app = Flask(__name__)
+api = Flask(__name__)
 
 
-@app.route("/users", methods=['GET', 'POST'])
+@api.route("/users", methods=['GET', 'POST'])
 def users():
     if request.method == 'POST':
         new_user_json = request.json
